@@ -1,14 +1,11 @@
 #ifndef __SHIM_H_
 #define __SHIM_H_
 
+/* To appease the obnoxious autoconf gods */
+#define __CONFIG_H__ 1
+
 #include "config.h"
 #include <dis-asm.h>
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdarg.h>
-
 
 typedef void (*callback)(const char *);
 
