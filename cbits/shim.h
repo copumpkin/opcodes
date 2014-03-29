@@ -1,9 +1,6 @@
 #ifndef __SHIM_H_
 #define __SHIM_H_
 
-/* To appease the obnoxious autoconf gods */
-#define __CONFIG_H__ 1
-
 #include "config.h"
 #include <dis-asm.h>
 

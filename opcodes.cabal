@@ -21,7 +21,7 @@ Library
 
   Include-dirs:        cbits/opcodes-2.24/include, cbits/opcodes-2.24/bfd
   
-  CC-options:          -include string.h
+  CC-options:          -include string.h -D__CONFIG_H__=1
   C-sources:           cbits/shim.c
 
                        cbits/opcodes-2.24/opcodes/arm-dis.c
