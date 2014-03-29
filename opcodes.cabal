@@ -1,0 +1,44 @@
+Name:                opcodes
+Version:             0.1
+Synopsis:            A simple binding to the libopcodes library
+License:             BSD3
+License-file:        LICENSE
+Author:              Daniel Peebles
+Maintainer:          Daniel Peebles <pumpkingod@gmail.com>
+Category:            System
+Build-type:          Custom
+Cabal-version:       >=1.2
+
+
+Library
+  Hs-source-dirs:      src/
+  Exposed-modules:     Architecture.Opcodes,
+                       Architecture.Opcodes.Internal
+  
+  Build-depends:       base < 5,
+                       bytestring,
+                       containers
+
+  Include-dirs:        cbits/opcodes-2.24/include, cbits/opcodes-2.24/bfd
+  
+  CC-options:          -include string.h
+  C-sources:           cbits/shim.c
+
+                       cbits/opcodes-2.24/opcodes/arm-dis.c
+                       cbits/opcodes-2.24/opcodes/i386-dis.c
+                       
+                       cbits/opcodes-2.24/opcodes/dis-init.c
+                       cbits/opcodes-2.24/opcodes/dis-buf.c
+
+--                       cbits/opcodes-2.24/opcodes/ppc-dis.c
+--                       cbits/opcodes-2.24/opcodes/ppc-opc.c
+--                       cbits/opcodes-2.24/bfd/libbfd.c
+--                       cbits/opcodes-2.24/bfd/bfd.c
+--                       cbits/opcodes-2.24/bfd/opncls.c
+--                       cbits/opcodes-2.24/bfd/cache.c
+--                       cbits/opcodes-2.24/bfd/bfdio.c
+--                       cbits/opcodes-2.24/libiberty/xstrerror.c
+--                       cbits/opcodes-2.24/libiberty/unlink-if-ordinary.c
+
+                       cbits/opcodes-2.24/libiberty/safe-ctype.c
+                       cbits/opcodes-2.24/libiberty/floatformat.c

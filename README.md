@@ -1,0 +1,1 @@
+Run ./get-binutils.sh to get opcodes, then run cabal install and if you're very lucky, everything should just work.
