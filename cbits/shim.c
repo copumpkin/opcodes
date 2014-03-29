@@ -1,3 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdarg.h>
+
+/* To appease the obnoxious autoconf gods */
+#define PACKAGE 1
+#define PACKAGE_VERSION 1
+
 #include "shim.h"
 
 static int fpf(void *data, const char *fmt, ...) {

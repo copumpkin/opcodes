@@ -2,11 +2,13 @@
 #define __SHIM_H_
 
 #include "config.h"
+#include <dis-asm.h>
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <dis-asm.h>
+
 
 typedef void (*callback)(const char *);
 
