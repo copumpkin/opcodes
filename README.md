@@ -1,4 +1,4 @@
-## opcodes
+## opcodes, a simple Haskell binding to libopcodes
 
 [![Build Status](https://travis-ci.org/copumpkin/opcodes.svg)](https://travis-ci.org/copumpkin/opcodes)
 
